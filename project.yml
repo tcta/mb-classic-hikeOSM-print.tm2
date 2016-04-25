@@ -1,0 +1,55 @@
+_prefs: 
+  baselayer: ''
+  print: true
+  saveCenter: false
+_properties: {}
+attribution: "<a href='https://transcaucasiantrail.org' target='_blank'>&copy; TCTA &copy; OpenStreetMap</a>"
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - 41.5283
+  - 42.634
+  - 6
+description: Style for hiking maps in the Caucasus
+format: png24
+interactivity_layer: ''
+layers: 
+  - landcover
+  - landuse
+  - contour.line
+  - hillshade
+  - waterway
+  - water
+  - aeroway
+  - barrier_line
+  - building
+  - landuse_overlay
+  - tunnel
+  - road
+  - bridge
+  - admin
+  - country_label_line
+  - country_label
+  - marine_label
+  - state_label
+  - place_label
+  - water_label
+  - mountain_peak_label
+  - poi_label
+  - road_label
+  - waterway_label
+  - housenum_label
+  - contour.label
+maxzoom: 20
+minzoom: 0
+name: hikeOSM
+source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7"
+styles: 
+  - style.mss
+  - road.mss
+  - label.mss
+  - poi.mss
+template: ''
