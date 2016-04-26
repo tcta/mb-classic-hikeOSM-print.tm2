@@ -67,35 +67,38 @@
       [zoom>=18] { line-width: 4; }
     }
   }
-  [class='primary']['mapnik::geometry_type'=2] {
-    ::case[zoom>=6] {
-      line-color: @case;
-      [zoom<=11] { line-color: @main; }
-      #road { line-cap: round; }
-      #road[structure='tunnel'] { line-dasharray: 3,3; }
-      line-width: 0.4;
-      [zoom>=12] { line-width: 3; }
-      [zoom>=13] { line-width: 3.5; }
-      [zoom>=14] { line-width: 4; }
-      [zoom>=15] { line-width: 5.5; }
-      [zoom>=16] { line-width: 9; }
-      [zoom>=17] { line-width: 13; }
-      [zoom>=18] { line-width: 15; }
-    }
-    ::fill[zoom>=12] {
-      line-color: @main;
-      line-cap: round;
-      #road[structure='tunnel'] { line-color: mix(@main,@land,50); }
-      [zoom>=12] { line-width: 1; }
-      [zoom>=13] { line-width: 1.5; }
-      [zoom>=14] { line-width: 2; }
-      [zoom>=15] { line-width: 3; }
-      [zoom>=16] { line-width: 6; }
-      [zoom>=17] { line-width: 10; }
-      [zoom>=18] { line-width: 12; }
+  [class='primary'],[class='secondary'] {
+    ['mapnik::geometry_type'=2] {
+      ::case[zoom>=6] {
+        line-color: @case;
+        [zoom<=11] { line-color: @main; }
+        #road { line-cap: round; }
+        #road[structure='tunnel'] { line-dasharray: 3,3; }
+        line-width: 0.4;
+        [zoom>=12] { line-width: 3; }
+        [zoom>=13] { line-width: 3.5; }
+        [zoom>=14] { line-width: 4; }
+        [zoom>=15] { line-width: 5.5; }
+        [zoom>=16] { line-width: 9; }
+        [zoom>=17] { line-width: 13; }
+        [zoom>=18] { line-width: 15; }
+      }
+      ::fill[zoom>=12] {
+        line-color: @main;
+        line-cap: round;
+        #road[structure='tunnel'] { line-color: mix(@main,@land,50); }
+        [zoom>=12] { line-width: 1; }
+        [zoom>=13] { line-width: 1.5; }
+        [zoom>=14] { line-width: 2; }
+        [zoom>=15] { line-width: 3; }
+        [zoom>=16] { line-width: 6; }
+        [zoom>=17] { line-width: 10; }
+        [zoom>=18] { line-width: 12; }
+      }
     }
   }
   [class='street']['mapnik::geometry_type'=2],
+  [class='tertiary']['mapnik::geometry_type'=2],
   [class='street_limited']['mapnik::geometry_type'=2] {
     ::case[zoom>=12] {
       line-color: @land * 0.8;
@@ -146,6 +149,20 @@
       [zoom>=18] { line-width: 4; }
     }
   }
+  [class='track'] {
+    ::case[zoom>=14]['mapnik::geometry_type'=2] {
+      line-color: #e0e0cd;
+      line-opacity: 0.5;
+      line-join: round;
+      line-width: 3;
+      [zoom>=15] { line-width: 4; }
+    }
+    line-width: 1.7;
+    [zoom>=15] { line-width: 2.2; }
+    line-color: #6e6647;
+    line-dasharray: 1,2;
+  }
+    
   [class='path'][type!='steps'] {
     #road[structure='bridge']::mask[zoom>=16] {
       line-color: #8f8880;
@@ -161,28 +178,29 @@
       [type='mtb'] {
         line-color: #ce9;
       }
-      [type='piste'] { line-color: #cce; }
-      [zoom>=15] { line-width: 3; }
+      [type='piste'] { line-color: #cce; line-width:0;}
+      [zoom>=15] { line-width: 2.5; }
       [zoom>=16] { line-width: 4; }
     }
-    ::path[zoom>=14]['mapnik::geometry_type'=2] {
+    ::path[zoom>=12]['mapnik::geometry_type'=2] {
       line-join: round;
       line-width: 1;
       [type='footway'] {
-        line-color: #bba;
-        line-dasharray: 2,1;
+        line-color: #6e6647;
+        line-dasharray: 6,3;
       }
       [type='path'] {
-        line-color: #987;
-        line-dasharray: 6,2;
+//        line-color: #987;
+        line-color: #6e6647;
+        line-dasharray: 6,3;
       }
       [type='hiking'] {
-        line-color: #c97;
-        line-dasharray: 2,1;
+        line-color: #6e6647;
+        line-dasharray: 3,1;
       }
       [type='trail'] {
-        line-color: #c97;
-        line-dasharray: 6,2;
+        line-color: #6e6647;
+        line-dasharray: 6,3;
       }
       [type='cycleway'] {
         line-color: #488;
@@ -195,16 +213,16 @@
       [type='piste'] {
         line-color: #87b;
         line-dasharray: 4,2;
-        line-width: 0.8;
+        line-width: 0;
       }
       [type='other'] {
         line-color: #bba;
         line-dasharray: 2,3;
       }
-      [zoom>=15] { line-width: 1.2; }
+      [zoom>=15] { line-width: 1.1; }
       [zoom>=16] { line-width: 1.5; }
-      [type='piste'][zoom>=15] { line-width: 1; }
-      [type='piste'][zoom>=16] { line-width: 1.2; }
+      [type='piste'][zoom>=15] { line-width: 0; }
+      [type='piste'][zoom>=16] { line-width: 0; }
     }
   }
   [class='path'][type='steps'][zoom>=16] {

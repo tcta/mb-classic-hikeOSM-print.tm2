@@ -31,6 +31,7 @@ layers:
   - road
   - bridge
   - admin
+  - grid1330
   - country_label_line
   - country_label
   - marine_label
@@ -46,10 +47,11 @@ layers:
 maxzoom: 20
 minzoom: 0
 name: hikeOSM
-source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7"
+source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.9c2d453a"
 styles: 
   - style.mss
   - road.mss
   - label.mss
   - poi.mss
+  - grid.mss
 template: ''

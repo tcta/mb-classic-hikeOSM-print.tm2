@@ -323,16 +323,18 @@ Map {
 // Buildings //
 
 #building {
-  ::shadow[zoom>=16] {
+  /*::shadow[zoom>=14] {
     line-clip: false;
     line-join: round;
     line-cap: round;
     line-color: fadeout(#000, 85%);
     [zoom>=17] { line-width: 2; }
-  }
+  }*/
   polygon-clip: false;
-  polygon-fill: @land * 0.95;
-  [zoom>=16] {
+  //polygon-fill: @land * 0.95;
+  polygon-fill: #b4a3a3;
+  polygon-opacity: 0.8;
+  [zoom>=14] {
     polygon-geometry-transform: translate(-0.5,-1.2);
   }
 }

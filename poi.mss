@@ -11,15 +11,20 @@
   marker-file: url("img/maki/[maki]-18.svg");
   text-face-name: @sans;
   text-placement: point;
+  text-halo-fill: fadeout(#fff,80%);
+  text-halo-radius: 1.5;
+  text-halo-rasterizer: fast;
+  [zoom=14] {text-size: 12;}
+  [zoom=15] {text-size: 14;}
 }
 
 #poi_label[type!='Aerodrome'][type!='Rail Station'][type!='hole'], {
   ::icon {
     [zoom<14],
     [zoom>=14][scalerank=1][localrank<=1],
-    [zoom>=15][scalerank<=2][localrank<=1],
-    [zoom>=16][scalerank<=3][localrank<=1],
-    [zoom>=17][localrank<=4],
+    [zoom>=15][localrank<=16],
+    [zoom>=16][localrank<=16],
+    [zoom>=17][localrank<=16],
     [zoom>=18][localrank<=16],
     [zoom>=19] {
       [maki!=null] {
@@ -30,11 +35,12 @@
         marker-width: 4;
         marker-fill: rgba(0,0,0,0);
         marker-line-width: 1.2;
+        //marker-line-color: #666;
         marker-line-color: #666;
       }
     }
   }
-  [zoom<14],
+  /*[zoom<14],
   [zoom>=14][scalerank=1][localrank<=1],
   [zoom>=15][scalerank<=2][localrank<=1],
   [zoom>=16][scalerank<=3][localrank<=1],
@@ -64,7 +70,7 @@
       [zoom>=17] { text-size: 11; text-wrap-width: 100; }
       [zoom>=19] { text-size: 12; text-wrap-width: 120; }
     }
-  }
+  }*/
 }
 
 // Rail Stations _______________________________________________________
@@ -148,23 +154,6 @@
     text-dy: 19;
     text-wrap-width: 120;
   }
-}
-
-// Golf holes __________________________________________________________
-
-#poi_label[type='hole'][zoom>=16] {
-  text-avoid-edges: false;
-  text-name: @name;
-  text-character-spacing: 0.25;
-  text-placement: point;
-  text-face-name: @sans;
-  text-fill: darken(#cdb,50);
-  text-size: 10;
-  text-halo-fill: @road_halo;
-  text-halo-radius: 1.5;
-  text-halo-rasterizer: fast;
-  [zoom>=17] { text-size: 12; }
-  [zoom>=18] { text-size: 14; }
 }
 
 /**/

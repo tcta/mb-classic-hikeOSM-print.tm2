@@ -577,7 +577,7 @@
 }
 
 // regular labels
-#road_label['mapnik::geometry_type'=2] {
+/*#road_label['mapnik::geometry_type'=2] {
   // The z14 filter is *not* redundant to logic in SQL queries. Because z14
   // includes all data for z14+ via overzooming, the streets included in a
   // z14 vector tile include more features than ideal for optimal performance.
@@ -631,7 +631,7 @@
   [type='piste'] { text-fill: lighten(#558,20); }
   [type='piste'][zoom>=15] { text-fill: lighten(#558,10); }
   [type='piste'][zoom>=18] { text-fill: #558; }
-}
+}*/
 
 
 // =====================================================================
