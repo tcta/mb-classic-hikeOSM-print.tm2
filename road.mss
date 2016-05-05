@@ -179,8 +179,8 @@
         line-color: #ce9;
       }
       [type='piste'] { line-color: #cce; line-width:0;}
-      [zoom>=15] { line-width: 2.5; }
-      [zoom>=16] { line-width: 4; }
+      [zoom>=15] { line-width: 0; }
+      [zoom>=16] { line-width: 0; }
     }
     ::path[zoom>=12]['mapnik::geometry_type'=2] {
       line-join: round;
