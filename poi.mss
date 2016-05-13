@@ -6,7 +6,7 @@
 // because we use different fields to set their icon images.
 
 // Mountain Peaks
-#mountain_peak_label[zoom>=11] {
+/*#mountain_peak_label[zoom>=11], {
   text-name:[name_en] + '\n' + [elevation_m] + 'm';
   marker-file: url("img/maki/[maki]-18.svg");
   text-face-name: @sans;
@@ -16,6 +16,27 @@
   text-halo-rasterizer: fast;
   [zoom=14] {text-size: 12;}
   [zoom=15] {text-size: 14;}
+}*/
+
+// Peaks
+#peaks[zoom>=12], {
+//  ::icon {
+//    marker-file: url("img/maki/triangle-12.svg");
+//  }
+  text-name:'x\n' + [name_en] + '\n' + [ele];
+// Why doesn't the marker work?
+//  marker-width:4;
+//  marker-fill: red;
+//  marker-line-width: 3.2;
+//  marker-line-color: red;
+  text-face-name: @sans;
+  text-placement: point;
+  text-halo-fill: fadeout(#fff,80%);
+  text-halo-radius: 1;
+  text-halo-rasterizer: fast;
+  [zoom<=13] {text-size: 8;}
+  [zoom=14] {text-size: 10;}
+  [zoom>=15] {text-size: 12;}
 }
 
 #poi_label[type!='Aerodrome'][type!='Rail Station'][type!='hole'], {
@@ -30,6 +51,9 @@
       [maki!=null] {
         marker-file: url("img/maki/[maki]-12.svg");
       }
+      [maki='marker'] {
+        marker-fill-opacity: 0;
+      }
       [maki=null] {
         // small dot for POIs with no Maki icon defined
         marker-width: 4;
@@ -40,13 +64,13 @@
       }
     }
   }
-  /*[zoom<14],
+  [zoom<14],
   [zoom>=14][scalerank=1][localrank<=1],
   [zoom>=15][scalerank<=2][localrank<=1],
   [zoom>=16][scalerank<=3][localrank<=1],
-  [zoom>=17][localrank<=4],
+  /*[zoom>=17][localrank<=4],
   [zoom>=18][localrank<=16],
-  [zoom>=19] {
+  [zoom>=19]*/ {
     text-name: @name;
     text-face-name: @sans;
     text-fill: #555;
@@ -70,7 +94,7 @@
       [zoom>=17] { text-size: 11; text-wrap-width: 100; }
       [zoom>=19] { text-size: 12; text-wrap-width: 120; }
     }
-  }*/
+  }
 }
 
 // Rail Stations _______________________________________________________

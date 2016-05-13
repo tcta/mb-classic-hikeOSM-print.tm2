@@ -70,6 +70,20 @@ Map {
   }
 }
 
+// Additional landcover I have added from Soviet maps (Tamo)
+
+#dense_forest {
+  polygon-fill: @wood;
+}
+#mechseri {
+  polygon-fill: #e5edca;//lighten(@wood,5);
+}
+#herbaceous {
+  polygon-fill: #f3f6dc;//lighten(@grass,5);
+}
+
+
+
 #landuse::use {
   // The ::use attachement is multuplied over #landcover and
   // #landuse::cover*, letting trees, grass, etc show through

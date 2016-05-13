@@ -10,14 +10,18 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 41.5283
-  - 42.634
-  - 6
+  - 42.4113
+  - 43.0812
+  - 12
 description: Style for hiking maps in the Caucasus
 format: png24
 interactivity_layer: ''
 layers: 
   - landcover
+  - dense_forest
+  - mechseri
+  - herbaceous
+  - glaciers
   - landuse
   - contour.line
   - hillshade
@@ -33,11 +37,13 @@ layers:
   - admin
   - grid1330
   - country_label_line
+  - tracksmaster
   - country_label
   - marine_label
   - state_label
   - place_label
   - water_label
+  - peaks
   - mountain_peak_label
   - poi_label
   - road_label
@@ -47,7 +53,7 @@ layers:
 maxzoom: 20
 minzoom: 0
 name: hikeOSM
-source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.9c2d453a"
+source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.9c2d453a,tct.dabiwpod,tct.bayra4t9,tct.5cbwyx2h,tct.7xtuqxiy,tct.7pscrkhh"
 styles: 
   - style.mss
   - road.mss
