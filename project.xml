@@ -3422,22 +3422,22 @@
 <Style name="tracksmaster" filter-mode="first">
   <Rule>
     <Filter>([source] = 'richard delong')</Filter>
-    <LineSymbolizer stroke="#800080" stroke-width="1" />
+    <LineSymbolizer stroke="#800080" stroke-width="1.3" stroke-dasharray="3, 3" />
   </Rule>
   <Rule>
     <Filter>([source] = 'NHF')</Filter>
-    <LineSymbolizer stroke="#6565f6" stroke-width="1" />
+    <LineSymbolizer stroke="#6565f6" stroke-width="1.3" stroke-dasharray="3, 3" />
   </Rule>
   <Rule>
     <Filter>([source] = 'tct-2015')</Filter>
-    <LineSymbolizer stroke="#d64646" stroke-width="1" />
+    <LineSymbolizer stroke="#d64646" stroke-width="1.3" stroke-dasharray="3, 3" />
   </Rule>
   <Rule>
     <Filter>([source] = 'josef')</Filter>
-    <LineSymbolizer stroke="#ffa500" stroke-width="1" />
+    <LineSymbolizer stroke="#ffa500" stroke-width="1.3" stroke-dasharray="3, 3" />
   </Rule>
   <Rule>
-    <LineSymbolizer stroke-width="1" />
+    <LineSymbolizer stroke-width="1.3" stroke-dasharray="3, 3" />
   </Rule>
 </Style>
 <Layer name="tracksmaster"

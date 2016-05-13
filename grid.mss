@@ -6,7 +6,8 @@
 }
 
 #tracksmaster {
-  line-width: 1;
+  line-width: 1.3;
+  line-dasharray: 3,3;
   [source="josef"] {
     line-color: orange;
   }
