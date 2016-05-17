@@ -4,6 +4,7 @@
 @water: #cdd;
 @water_dark: #185869;  // for the inline/shadow
 @crop: #eeeed4;
+@cropland: #e9e5c2;
 @grass: #e7ebd1;
 @scrub: #e0e8cd;
 @wood: #d4e2c6;
@@ -40,6 +41,7 @@ Map {
       [zoom>=5]{polygon-opacity: 0.4;}
       [zoom>=6]{polygon-opacity: 0.2;}
       [zoom>=7]{polygon-opacity: 0;}
+    [class='crop'] { polygon-opacity: 0.7; }
   }
 }
 
@@ -72,7 +74,7 @@ Map {
 
 // Additional landcover I have added from Soviet maps (Tamo)
 
-#dense_forest {
+#dense_forest[zoom<=21] {
   polygon-fill: @wood;
 }
 #mechseri {
@@ -223,10 +225,10 @@ Map {
 #contour.line::line[index!=-1] {
   line-color: #000;
   line-opacity: 0.1;
-  line-width: 1.2;
+  line-width: 1.2;//0.9;//1.2;
   [index>=5] {
     line-opacity: 0.2;
-    line-width: 1.2;
+    line-width: 1.2;//0.8;//1.2;
   }
   [zoom<=10] {
     line-opacity: 0;

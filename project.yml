@@ -1,5 +1,6 @@
 _prefs: 
   baselayer: ''
+  mapid: tct.1f7f0331
   print: true
   saveCenter: false
 _properties: {}
@@ -14,7 +15,7 @@ center:
   - 43.0812
   - 12
 description: Style for hiking maps in the Caucasus
-format: png24
+format: "png8:m=h"
 interactivity_layer: ''
 layers: 
   - landcover
@@ -38,12 +39,14 @@ layers:
   - grid1330
   - country_label_line
   - tracksmaster
+  - just-tct
   - country_label
   - marine_label
   - state_label
   - place_label
   - water_label
   - peaks
+  - mountain_pass
   - mountain_peak_label
   - poi_label
   - road_label
@@ -53,7 +56,7 @@ layers:
 maxzoom: 20
 minzoom: 0
 name: hikeOSM
-source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.9c2d453a,tct.dabiwpod,tct.bayra4t9,tct.5cbwyx2h,tct.7xtuqxiy,tct.7pscrkhh"
+source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.9c2d453a,tct.dabiwpod,tct.bayra4t9,tct.5cbwyx2h,tct.7xtuqxiy,tct.7pscrkhh,tct.0acy2lm6,tct.br86tmat"
 styles: 
   - style.mss
   - road.mss

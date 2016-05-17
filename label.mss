@@ -522,7 +522,7 @@
 
 #waterway_label[type='river'][zoom>=12],
 #waterway_label[type='canal'][zoom>=14],
-#waterway_label[type='stream'][zoom>=16] {
+#waterway_label[type='stream'][zoom>=14] {
   text-avoid-edges: true;
   text-name: @name;
   text-face-name: @sans_italic;

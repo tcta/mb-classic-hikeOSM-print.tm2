@@ -20,23 +20,35 @@
 
 // Peaks
 #peaks[zoom>=12], {
-//  ::icon {
-//    marker-file: url("img/maki/triangle-12.svg");
-//  }
   text-name:'x\n' + [name_en] + '\n' + [ele];
-// Why doesn't the marker work?
-//  marker-width:4;
-//  marker-fill: red;
-//  marker-line-width: 3.2;
-//  marker-line-color: red;
   text-face-name: @sans;
   text-placement: point;
   text-halo-fill: fadeout(#fff,80%);
   text-halo-radius: 1;
   text-halo-rasterizer: fast;
+  text-margin: 30; // Prevent from having a ton of spot heights next to each other
   [zoom<=13] {text-size: 8;}
   [zoom=14] {text-size: 10;}
   [zoom>=15] {text-size: 12;}
+}
+
+// Mountain Passes
+#mountain_pass[zoom>=12][name_en!=''] {
+  text-face-name: @sans;
+  text-name: [name_en];
+  text-fill: #806b2d; 
+  text-dy: 10;
+  text-placement: point;
+  text-halo-fill: @crop;//fadeout(#fff,80%);
+  text-halo-radius: 1.2;
+  text-halo-rasterizer: fast;
+  //marker-allow-overlap: true;
+  marker-fill: black;
+  [zoom<=13] {marker-width: 12;}
+  [zoom>=14] {marker-width: 14;}
+  [zoom>=16] {marker-width: 16;}
+  [zoom>=18] {marker-width: 20;}
+  marker-file: url("img/icon-ct/mountain-pass.svg");
 }
 
 #poi_label[type!='Aerodrome'][type!='Rail Station'][type!='hole'], {

@@ -1,9 +1,9 @@
 @grid_color: #f6f5ed;
 
-#grid1330 {
+/*#grid1330 {
   line-color: @grid_color;
   line-width: 0.7;
-}
+}*/
 
 #tracksmaster {
   line-width: 1.3;
@@ -19,5 +19,12 @@
   }
   [source="richard delong"] {
     line-color: purple;
+    line-opacity:0; // hide richard's lines
   }
+}
+
+#just-tct {
+  line-color: #fafa62;
+  line-width: 4;
+  line-opacity: 0.3;
 }
