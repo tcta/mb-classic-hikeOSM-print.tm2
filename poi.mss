@@ -19,7 +19,7 @@
 }*/
 
 // Peaks
-#peaks[zoom>=12], {
+#peaks[zoom>=11][name_en!=''] {
   text-name:'x\n' + [name_en] + '\n' + [ele];
   text-face-name: @sans;
   text-placement: point;
@@ -33,7 +33,7 @@
 }
 
 // Mountain Passes
-#mountain_pass[zoom>=12][name_en!=''] {
+#mountain_pass[zoom>=11][name_en!=''] {
   text-face-name: @sans;
   text-name: [name_en];
   text-fill: #806b2d; 
@@ -50,6 +50,34 @@
   [zoom>=18] {marker-width: 20;}
   marker-file: url("img/icon-ct/mountain-pass.svg");
 }
+
+// Get rid of some of the mountain climbing passes
+#mountain_pass[zoom>=11][name_en!=''][name_en=~".*[0-9][A-D]"] {
+  text-opacity: 0;
+  text-halo-opacity: 0;
+  marker-opacity: 0;
+}
+
+#poi_label[maki='drinking-water'] {
+  [zoom>=17] {
+    text-face-name: @sans;
+    text-name: "Spring";
+    text-fill: #3b7ab0; 
+    text-dy: 12;
+    text-placement: point;
+    text-halo-fill: @crop;//fadeout(#fff,80%);
+    text-halo-radius: 1.2;
+    text-halo-rasterizer: fast;
+    text-margin: 20;
+  }
+  marker-fill: #5e95c4;
+  marker-line-color: white;
+  marker-line-width: 3;
+  [zoom>=16] {marker-width: 14;}
+  [zoom>=18] {marker-width: 16;}
+  marker-file: url("img/maki/water-18.svg");
+}
+  
 
 #poi_label[type!='Aerodrome'][type!='Rail Station'][type!='hole'], {
   ::icon {

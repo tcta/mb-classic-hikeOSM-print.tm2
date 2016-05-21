@@ -5,7 +5,7 @@
   line-width: 0.7;
 }*/
 
-#tracksmaster {
+/*#tracksmaster {
   line-width: 1.3;
   line-dasharray: 3,3;
   [source="josef"] {
@@ -19,12 +19,18 @@
   }
   [source="richard delong"] {
     line-color: purple;
-    line-opacity:0; // hide richard's lines
   }
-}
+}*/
 
 #just-tct {
   line-color: #fafa62;
   line-width: 4;
   line-opacity: 0.3;
+}
+
+#just-tct::and {
+  line-color: #d64646;
+  line-width: 1.3;
+  line-dasharray: 3,3;
+  line-opacity: 0.8;
 }
