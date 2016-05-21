@@ -37,6 +37,7 @@ layers:
   - bridge
   - admin
   - grid1330
+  - utm-lines
   - country_label_line
   - tracksmaster
   - just-tct
@@ -56,7 +57,7 @@ layers:
 maxzoom: 20
 minzoom: 0
 name: hikeOSM
-source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.9c2d453a,tct.dabiwpod,tct.bayra4t9,tct.5cbwyx2h,tct.7xtuqxiy,tct.7pscrkhh,tct.0acy2lm6,tct.br86tmat"
+source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.9c2d453a,tct.dabiwpod,tct.bayra4t9,tct.5cbwyx2h,tct.7xtuqxiy,tct.7pscrkhh,tct.0acy2lm6,tct.br86tmat,tct.81e5wlz3"
 styles: 
   - style.mss
   - road.mss

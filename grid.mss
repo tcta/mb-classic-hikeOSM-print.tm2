@@ -1,9 +1,21 @@
-@grid_color: #f6f5ed;
+//@grid_color: #f6f5ed;
+@grid_color: #f4c95c;
 
 /*#grid1330 {
-  line-color: @grid_color;
+  line-color: orange;
   line-width: 0.7;
 }*/
+
+#utm-lines[zoom>=15] {
+  line-color: @grid_color;
+  line-width: 0.7;
+  [zoom>=16] {
+    text-name: [Coordinate];
+    text-face-name: @sans;
+    text-placement: line;
+    text-margin: 250;
+  }
+}
 
 /*#tracksmaster {
   line-width: 1.3;
