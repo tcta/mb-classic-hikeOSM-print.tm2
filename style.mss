@@ -244,6 +244,22 @@ Map {
   }
 }
 
+/*#sov-lines {
+  line-color: #f00;
+  line-opacity: 0.1;
+  line-width: 1.2;//0.9;//1.2;
+  text-name: "[Contour]+' m'";
+  text-face-name: 'Open Sans Regular';
+  text-placement: line;
+  text-size: 10;
+  text-fill: #666;
+  text-avoid-edges: true;
+  text-halo-fill: fadeout(@crop,80%);
+  text-halo-radius: 2;
+  text-halo-rasterizer: fast;
+  text-margin: 150;
+}*/
+
 #contour.label::label[zoom>=14] {
   [zoom<=13][index>=5],
   [zoom>=14][zoom<=15][index=10],
@@ -257,6 +273,7 @@ Map {
     text-halo-fill: fadeout(@crop,80%);
     text-halo-radius: 2;
     text-halo-rasterizer: fast;
+    text-margin: 100; // added this
   }
 }
 

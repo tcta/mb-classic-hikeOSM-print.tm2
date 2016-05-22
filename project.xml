@@ -11,7 +11,7 @@
   <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">0</Parameter>
   <Parameter name="name"><![CDATA[hikeOSM]]></Parameter>
-  <Parameter name="source"><![CDATA[mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.9c2d453a,tct.dabiwpod,tct.bayra4t9,tct.5cbwyx2h,tct.7xtuqxiy,tct.7pscrkhh,tct.0acy2lm6,tct.br86tmat,tct.81e5wlz3]]></Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.9c2d453a,tct.dabiwpod,tct.bayra4t9,tct.5cbwyx2h,tct.7xtuqxiy,tct.7pscrkhh,tct.0acy2lm6,tct.br86tmat,tct.81e5wlz3,tct.6itt4u7y,tct.98ryi1i6,tct.ef468ed3]]></Parameter>
 </Parameters>
 
 <FontSet name="fontset-0">
@@ -627,6 +627,14 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>contour-line</StyleName>  </Layer>
 
+<Layer name="sov-hs8"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="sov-lines"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
 <Style name="hillshade-1" filter-mode="first" image-filters="agg-stack-blur(4,4)" image-filters-inflate="true">
   <Rule>
     <MaxScaleDenominator>400000</MaxScaleDenominator>
@@ -1055,6 +1063,14 @@
     <StyleName>hillshade-0</StyleName>
     <StyleName>hillshade-4</StyleName>
     <StyleName>hillshade-1</StyleName>  </Layer>
+
+<Layer name="sov-hs8"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="Untitled"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
 
 <Style name="waterway" filter-mode="first">
   <Rule>
@@ -3392,7 +3408,7 @@
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <LineSymbolizer stroke="#f4c95c" stroke-width="0.7" />
-    <TextSymbolizer fontset-name="fontset-0" placement="line" margin="250" ><![CDATA[[Coordinate]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-0" placement="line" ><![CDATA[[Coordinate]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -5288,19 +5304,36 @@
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([name_en] != '')</Filter>
-    <TextSymbolizer size="12" fontset-name="fontset-0" placement="point" halo-fill="rgba(255, 255, 255, 0.19999999999999996)" halo-radius="1" halo-rasterizer="fast" margin="30" ><![CDATA['x\n'+[name_en]+'\n'+[ele]]]></TextSymbolizer>
+    <TextSymbolizer size="12" fontset-name="fontset-0" placement="point" halo-fill="rgba(255, 255, 255, 0.19999999999999996)" halo-radius="1" halo-rasterizer="fast" margin="30" minimum-padding="1" ><![CDATA['x\n'+[name_en]+'\n'+[ele]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([name_en] != '')</Filter>
-    <TextSymbolizer size="10" fontset-name="fontset-0" placement="point" halo-fill="rgba(255, 255, 255, 0.19999999999999996)" halo-radius="1" halo-rasterizer="fast" margin="30" ><![CDATA['x\n'+[name_en]+'\n'+[ele]]]></TextSymbolizer>
+    <TextSymbolizer size="10" fontset-name="fontset-0" placement="point" halo-fill="rgba(255, 255, 255, 0.19999999999999996)" halo-radius="1" halo-rasterizer="fast" margin="30" minimum-padding="1" ><![CDATA['x\n'+[name_en]+'\n'+[ele]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>400000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([name_en] != '')</Filter>
-    <TextSymbolizer size="8" fontset-name="fontset-0" placement="point" halo-fill="rgba(255, 255, 255, 0.19999999999999996)" halo-radius="1" halo-rasterizer="fast" margin="30" ><![CDATA['x\n'+[name_en]+'\n'+[ele]]]></TextSymbolizer>
+    <TextSymbolizer size="8" fontset-name="fontset-0" placement="point" halo-fill="rgba(255, 255, 255, 0.19999999999999996)" halo-radius="1" halo-rasterizer="fast" margin="30" minimum-padding="1" ><![CDATA['x\n'+[name_en]+'\n'+[ele]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([name_en] = '')</Filter>
+    <TextSymbolizer size="12" fontset-name="fontset-0" placement="point" halo-fill="rgba(255, 255, 255, 0.19999999999999996)" halo-radius="1" halo-rasterizer="fast" margin="30" minimum-padding="1" ><![CDATA['x\n'+[name_en]+'\n'+[ele]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([name_en] = '')</Filter>
+    <TextSymbolizer size="10" fontset-name="fontset-0" placement="point" halo-fill="rgba(255, 255, 255, 0.19999999999999996)" halo-radius="1" halo-rasterizer="fast" margin="30" minimum-padding="1" ><![CDATA['x\n'+[name_en]+'\n'+[ele]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([name_en] = '')</Filter>
+    <TextSymbolizer size="8" fontset-name="fontset-0" placement="point" halo-fill="rgba(255, 255, 255, 0.19999999999999996)" halo-radius="1" halo-rasterizer="fast" margin="30" minimum-padding="1" ><![CDATA['x\n'+[name_en]+'\n'+[ele]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="peaks"
@@ -5413,7 +5446,13 @@
     <MarkersSymbolizer width="4" fill="rgba(0, 0, 0, 0)" stroke-width="1.2" stroke="#666666" />
   </Rule>
   <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] != 'Aerodrome') and ([type] != 'Rail Station') and ([type] != 'hole') and ([localrank] &lt;= 16) and ([maki] = 'marker')</Filter>
+    <MarkersSymbolizer fill-opacity="0" file="img/maki/[maki]-12.svg" />
+  </Rule>
+  <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] != 'Aerodrome') and ([type] != 'Rail Station') and ([type] != 'hole') and ([localrank] &lt;= 16) and ([maki] = 'marker')</Filter>
     <MarkersSymbolizer fill-opacity="0" file="img/maki/[maki]-12.svg" />
   </Rule>
@@ -5423,7 +5462,13 @@
     <MarkersSymbolizer fill-opacity="0" file="img/maki/[maki]-12.svg" />
   </Rule>
   <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] != 'Aerodrome') and ([type] != 'Rail Station') and ([type] != 'hole') and ([localrank] &lt;= 16) and ([maki] != null)</Filter>
+    <MarkersSymbolizer file="img/maki/[maki]-12.svg" />
+  </Rule>
+  <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] != 'Aerodrome') and ([type] != 'Rail Station') and ([type] != 'hole') and ([localrank] &lt;= 16) and ([maki] != null)</Filter>
     <MarkersSymbolizer file="img/maki/[maki]-12.svg" />
   </Rule>
@@ -5443,12 +5488,12 @@
     <MarkersSymbolizer width="4" fill="rgba(0, 0, 0, 0)" stroke-width="1.2" stroke="#666666" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
     <Filter>([type] != 'Aerodrome') and ([type] != 'Rail Station') and ([type] != 'hole') and ([maki] = 'marker')</Filter>
     <MarkersSymbolizer fill-opacity="0" file="img/maki/[maki]-12.svg" />
   </Rule>
   <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] != 'Aerodrome') and ([type] != 'Rail Station') and ([type] != 'hole') and ([maki] = 'marker')</Filter>
     <MarkersSymbolizer fill-opacity="0" file="img/maki/[maki]-12.svg" />
   </Rule>
@@ -5656,44 +5701,6 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <Filter>([type] = 'Rail Station') and ([network] != null) and ([scalerank] = 3) and ([maki] = 'drinking-water')</Filter>
-    <TextSymbolizer size="12" halo-radius="2" dx="15" dy="15" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" halo-rasterizer="fast" wrap-width="80" placement-type="simple" placements="S,N,E,W" placement="point" margin="20" ><![CDATA[[name_en]]]></TextSymbolizer>
-    <MarkersSymbolizer file="img/rail/[network]-12.svg" height="24" allow-overlap="false" width="16" fill="#5e95c4" stroke="#ffffff" stroke-width="3" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([type] = 'Rail Station') and ([network] != null) and ([scalerank] = 3) and ([maki] = 'drinking-water')</Filter>
-    <TextSymbolizer size="12" halo-radius="2" dx="15" dy="15" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" halo-rasterizer="fast" wrap-width="80" placement-type="simple" placements="S,N,E,W" placement="point" margin="20" ><![CDATA[[name_en]]]></TextSymbolizer>
-    <MarkersSymbolizer file="img/rail/[network]-12.svg" height="24" allow-overlap="false" width="14" fill="#5e95c4" stroke="#ffffff" stroke-width="3" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([type] = 'Rail Station') and ([network] != null) and ([scalerank] = 3) and ([maki] = 'drinking-water')</Filter>
-    <MarkersSymbolizer file="img/rail/[network]-18.svg" height="18" allow-overlap="false" width="14" fill="#5e95c4" stroke="#ffffff" stroke-width="3" />
-    <TextSymbolizer fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" halo-radius="1.5" halo-rasterizer="fast" size="11" wrap-width="80" placement-type="simple" dx="11" dy="11" placements="S,N,E,W" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'Rail Station') and ([network] != null) and ([scalerank] = 3) and ([maki] = 'drinking-water')</Filter>
-    <MarkersSymbolizer fill="#5e95c4" stroke="#ffffff" stroke-width="3" file="img/maki/water-18.svg" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <Filter>([type] = 'Rail Station') and ([network] != null) and ([scalerank] = 3)</Filter>
-    <MarkersSymbolizer file="img/rail/[network]-12.svg" height="24" allow-overlap="false" />
-    <TextSymbolizer size="12" halo-radius="2" dx="15" dy="15" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" halo-rasterizer="fast" wrap-width="80" placement-type="simple" placements="S,N,E,W" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([type] = 'Rail Station') and ([network] != null) and ([scalerank] = 3)</Filter>
-    <MarkersSymbolizer file="img/rail/[network]-18.svg" height="18" allow-overlap="false" />
-    <TextSymbolizer fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" halo-radius="1.5" halo-rasterizer="fast" size="11" wrap-width="80" placement-type="simple" dx="11" dy="11" placements="S,N,E,W" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
     <Filter>([type] = 'Rail Station') and ([network] != null) and ([scalerank] = 2) and ([maki] = 'drinking-water')</Filter>
     <TextSymbolizer size="12" halo-radius="2" dx="15" dy="15" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" halo-rasterizer="fast" wrap-width="80" placement-type="simple" placements="S,N,E,W" placement="point" margin="20" ><![CDATA[[name_en]]]></TextSymbolizer>
     <MarkersSymbolizer file="img/rail/[network]-12.svg" height="24" allow-overlap="false" width="16" fill="#5e95c4" stroke="#ffffff" stroke-width="3" />
@@ -5791,6 +5798,44 @@
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'Rail Station') and ([network] != null) and ([scalerank] = 1)</Filter>
     <MarkersSymbolizer file="img/rail/[network]-12.svg" height="12" allow-overlap="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'Rail Station') and ([network] != null) and ([scalerank] = 3) and ([maki] = 'drinking-water')</Filter>
+    <TextSymbolizer size="12" halo-radius="2" dx="15" dy="15" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" halo-rasterizer="fast" wrap-width="80" placement-type="simple" placements="S,N,E,W" placement="point" margin="20" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <MarkersSymbolizer file="img/rail/[network]-12.svg" height="24" allow-overlap="false" width="16" fill="#5e95c4" stroke="#ffffff" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'Rail Station') and ([network] != null) and ([scalerank] = 3) and ([maki] = 'drinking-water')</Filter>
+    <TextSymbolizer size="12" halo-radius="2" dx="15" dy="15" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" halo-rasterizer="fast" wrap-width="80" placement-type="simple" placements="S,N,E,W" placement="point" margin="20" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <MarkersSymbolizer file="img/rail/[network]-12.svg" height="24" allow-overlap="false" width="14" fill="#5e95c4" stroke="#ffffff" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'Rail Station') and ([network] != null) and ([scalerank] = 3) and ([maki] = 'drinking-water')</Filter>
+    <MarkersSymbolizer file="img/rail/[network]-18.svg" height="18" allow-overlap="false" width="14" fill="#5e95c4" stroke="#ffffff" stroke-width="3" />
+    <TextSymbolizer fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" halo-radius="1.5" halo-rasterizer="fast" size="11" wrap-width="80" placement-type="simple" dx="11" dy="11" placements="S,N,E,W" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'Rail Station') and ([network] != null) and ([scalerank] = 3) and ([maki] = 'drinking-water')</Filter>
+    <MarkersSymbolizer fill="#5e95c4" stroke="#ffffff" stroke-width="3" file="img/maki/water-18.svg" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([type] = 'Rail Station') and ([network] != null) and ([scalerank] = 3)</Filter>
+    <MarkersSymbolizer file="img/rail/[network]-12.svg" height="24" allow-overlap="false" />
+    <TextSymbolizer size="12" halo-radius="2" dx="15" dy="15" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" halo-rasterizer="fast" wrap-width="80" placement-type="simple" placements="S,N,E,W" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'Rail Station') and ([network] != null) and ([scalerank] = 3)</Filter>
+    <MarkersSymbolizer file="img/rail/[network]-18.svg" height="18" allow-overlap="false" />
+    <TextSymbolizer fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" halo-radius="1.5" halo-rasterizer="fast" size="11" wrap-width="80" placement-type="simple" dx="11" dy="11" placements="S,N,E,W" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
@@ -6408,17 +6453,17 @@
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([index] = 10)</Filter>
-    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#666666" avoid-edges="true" halo-fill="rgba(238, 238, 212, 0.19999999999999996)" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#666666" avoid-edges="true" halo-fill="rgba(238, 238, 212, 0.19999999999999996)" halo-radius="2" halo-rasterizer="fast" margin="100" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([index] = 10)</Filter>
-    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#666666" avoid-edges="true" halo-fill="rgba(238, 238, 212, 0.19999999999999996)" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#666666" avoid-edges="true" halo-fill="rgba(238, 238, 212, 0.19999999999999996)" halo-radius="2" halo-rasterizer="fast" margin="100" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([index] &gt;= 5)</Filter>
-    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#666666" avoid-edges="true" halo-fill="rgba(238, 238, 212, 0.19999999999999996)" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#666666" avoid-edges="true" halo-fill="rgba(238, 238, 212, 0.19999999999999996)" halo-radius="2" halo-rasterizer="fast" margin="100" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="contour"

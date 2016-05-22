@@ -19,7 +19,8 @@
 }*/
 
 // Peaks
-#peaks[zoom>=11][name_en!=''] {
+#peaks[zoom>=11][name_en!=''],
+#peaks[zoom>=13][name_en=''] {
   text-name:'x\n' + [name_en] + '\n' + [ele];
   text-face-name: @sans;
   text-placement: point;
@@ -27,6 +28,7 @@
   text-halo-radius: 1;
   text-halo-rasterizer: fast;
   text-margin: 30; // Prevent from having a ton of spot heights next to each other
+  text-min-padding: 1; // Prevent text from getting cut off at tiles
   [zoom<=13] {text-size: 8;}
   [zoom=14] {text-size: 10;}
   [zoom>=15] {text-size: 12;}

@@ -13,7 +13,7 @@
     text-name: [Coordinate];
     text-face-name: @sans;
     text-placement: line;
-    text-margin: 250;
+//    text-margin: 250;
   }
 }
 
