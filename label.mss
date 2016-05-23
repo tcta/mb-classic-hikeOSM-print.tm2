@@ -422,6 +422,7 @@
   [zoom>=15] { text-size: 16; text-wrap-width: 120; }
   [zoom>=16] { text-size: 18; text-wrap-width: 160; }
   [zoom=17] { text-size: 20; text-wrap-width: 200; }
+  text-min-padding: 1;
 }
 
 // Suburbs _____________________________________________________________
@@ -449,7 +450,7 @@
 
 // Neighbourhoods & Hamlets ____________________________________________
 
-#place_label[zoom>=13][zoom<=18] {
+#place_label[zoom>=12][zoom<=18] {
   [type='hamlet'],
   [type='neighbourhood'] {
     text-name: @name;
@@ -468,6 +469,7 @@
     [zoom>=16] { text-size: 14; text-wrap-width: 100; }
     [zoom>=17] { text-size: 16; text-wrap-width: 130; }
     [zoom>=18] { text-size: 18; text-wrap-width: 160; }
+    text-min-padding: 1;
   }
 }
 

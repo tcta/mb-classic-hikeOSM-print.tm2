@@ -17,7 +17,7 @@
   }
 }
 
-/*#tracksmaster {
+#tracksmaster {
   line-width: 1.3;
   line-dasharray: 3,3;
   [source="josef"] {
@@ -25,14 +25,15 @@
   }
   [source="tct-2015"] {
     line-color: #d64646;
+    line-opacity:0;
   }
   [source="NHF"] {
     line-color: #6565f6;
   }
   [source="richard delong"] {
-    line-color: purple;
+    line-color: #e00ae0;
   }
-}*/
+}
 
 #just-tct {
   line-color: #fafa62;

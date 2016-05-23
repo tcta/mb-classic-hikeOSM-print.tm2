@@ -442,7 +442,16 @@ Map {
     [zoom>=6] { line-width: 1; }
     [zoom>=8] { line-width: 2; }
     [zoom>=12] { line-width: 3; }
+    //line-opacity:0;
   }
 }
+
+/*#svaneti-racha-border {
+  line-color:#88a;
+  line-dasharray: 10,4;
+  line-opacity: 0.4;
+  [zoom<10] { line-width: 0; }
+  [zoom>=10] { line-width: 2; }
+}*/
 
 /**/
