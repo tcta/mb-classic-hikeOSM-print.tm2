@@ -29,9 +29,9 @@
   text-halo-rasterizer: fast;
   text-margin: 30; // Prevent from having a ton of spot heights next to each other
   text-min-padding: 1; // Prevent text from getting cut off at tiles
-  [zoom<=13] {text-size: 8;}
-  [zoom=14] {text-size: 10;}
-  [zoom>=15] {text-size: 12;}
+  [zoom<=13] {text-size: 8 * @text_multiplier;}
+  [zoom=14] {text-size: 10 * @text_multiplier;}
+  [zoom>=15] {text-size: 12 * @text_multiplier;}
 }
 
 // Mountain Passes
@@ -46,8 +46,15 @@
   text-halo-rasterizer: fast;
   //marker-allow-overlap: true;
   marker-fill: black;
-  [zoom<=13] {marker-width: 12;}
-  [zoom>=14] {marker-width: 14;}
+  [zoom<=13] {
+    marker-width: 12;
+    text-size: 8 * @text_multiplier;
+  }
+  [zoom>=14] {
+    marker-width: 14;
+    text-size: 10 * @text_multiplier;
+  }
+  [zoom>=15] {text-size: 12 * @text_multiplier;}
   [zoom>=16] {marker-width: 16;}
   [zoom>=18] {marker-width: 20;}
   marker-file: url("img/icon-ct/mountain-pass.svg");
@@ -124,17 +131,17 @@
     text-wrap-width: 80;
     text-wrap-before: true;
     [scalerank=1] {
-      [zoom>=15] { text-size: 11; text-wrap-width: 100; }
-      [zoom>=16] { text-size: 12; text-wrap-width: 120; }
-      [zoom>=17] { text-size: 14; text-wrap-width: 130; }
+      [zoom>=15] { text-size: 11 * @text_multiplier; text-wrap-width: 100; }
+      [zoom>=16] { text-size: 12 * @text_multiplier; text-wrap-width: 120; }
+      [zoom>=17] { text-size: 14 * @text_multiplier; text-wrap-width: 130; }
     }
     [scalerank=2] {
-      [zoom>=16] { text-size: 11; text-wrap-width: 100; }
-      [zoom>=17] { text-size: 12; text-wrap-width: 120; }
+      [zoom>=16] { text-size: 11 * @text_multiplier; text-wrap-width: 100; }
+      [zoom>=17] { text-size: 12 * @text_multiplier; text-wrap-width: 120; }
     }
     [scalerank>=3] {
-      [zoom>=17] { text-size: 11; text-wrap-width: 100; }
-      [zoom>=19] { text-size: 12; text-wrap-width: 120; }
+      [zoom>=17] { text-size: 11 * @text_multiplier; text-wrap-width: 100; }
+      [zoom>=19] { text-size: 12 * @text_multiplier; text-wrap-width: 120; }
     }
   }
 }
@@ -162,13 +169,13 @@
     text-halo-fill: #fff;
     text-halo-radius: 1.5;
     text-halo-rasterizer: fast;
-    text-size: 11;
+    text-size: 11 * @text_multiplier;
     text-wrap-width: 80;
     text-placement-type: simple;
     text-dx: 11; text-dy: 11;
     text-placements: "S,N,E,W";
     [zoom>=17] {
-      text-size: 12;
+      text-size: 12 * @text_multiplier;
       text-halo-radius: 2;
       text-dx: 15; text-dy: 15;
     }
@@ -180,7 +187,7 @@
 #poi_label[type='Aerodrome'][zoom>=10] {
   marker-file: url("img/maki/[maki]-12.svg");
   text-name: "''";
-  text-size: 10;
+  text-size: 10 * @text_multiplier;
   text-fill: #888;
   text-halo-fill: #fff;
   text-halo-radius: 1;
@@ -200,7 +207,7 @@
   [zoom>=12][scalerank=2],
   [zoom>=14] {
     marker-file: url("img/maki/[maki]-18.svg");
-    text-size: 10;
+    text-size: 10 * @text_multiplier;
     text-dy: 12;
     text-wrap-width: 80;
   }
@@ -208,7 +215,7 @@
   [zoom>=14][scalerank=2],
   [zoom>=15] {
     marker-file: url("img/maki/[maki]-24.svg");
-    text-size: 12;
+    text-size: 12 * @text_multiplier;
     text-dy: 15;
     text-wrap-width: 100;
   }
@@ -216,7 +223,7 @@
   [zoom>=15][scalerank=2],
   [zoom>=16] {
     marker-file: url("img/maki/[maki]-24.svg");
-    text-size: 14;
+    text-size: 14 * @text_multiplier;
     text-dy: 19;
     text-wrap-width: 120;
   }

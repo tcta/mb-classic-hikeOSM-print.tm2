@@ -38,7 +38,8 @@
 @poi_text:          @poi_text;  
 @road_text:         #4a4032;
 @road_halo:         #fff;
-@other_text:        lighten(#4a4032,20);
+//@other_text:        lighten(#4a4032,20);
+@other_text:        lighten(#4a4032,1);
 @other_halo:        @place_halo;
 @locality_text:     #aaa;
 @locality_halo:     @land;
@@ -67,61 +68,61 @@
   }
   [labelrank=1] {
     [zoom=3] {
-      text-size: 20;
+      text-size: 20 * @text_multiplier;
       text-character-spacing: 8;
       text-line-spacing: 16;
     }
     [zoom=4] {
-      text-size: 25;
+      text-size: 25 * @text_multiplier;
       text-character-spacing: 16;
       text-line-spacing: 24;
     }
     [zoom=5] {
-      text-size: 30;
+      text-size: 30 * @text_multiplier;
       text-character-spacing: 20;
       text-line-spacing: 32;
     }
   }
   [labelrank=2] {
     [zoom=3] {
-      text-size: 13;
+      text-size: 13 * @text_multiplier;
       text-character-spacing: 1;
       text-line-spacing: 6;
     }
     [zoom=4] {
-      text-size: 14;
+      text-size: 14 * @text_multiplier;
       text-character-spacing: 2;
       text-line-spacing: 8;
     }
     [zoom=5] {
-      text-size: 20;
+      text-size: 20 * @text_multiplier;
       text-character-spacing: 4;
       text-line-spacing: 8;
     }
     [zoom=6] {
-      text-size: 24;
+      text-size: 24 * @text_multiplier;
       text-character-spacing: 5;
       text-line-spacing: 10;
     }
   }
   [labelrank=3] {
     [zoom=3] {
-      text-size: 12;
+      text-size: 12 * @text_multiplier;
       text-character-spacing: 2;
       text-line-spacing: 3;
     }
     [zoom=4] {
-      text-size: 13;
+      text-size: 13 * @text_multiplier;
       text-character-spacing: 3;
       text-line-spacing: 8;
     }
     [zoom=5] {
-      text-size: 15;
+      text-size: 15 * @text_multiplier;
       text-character-spacing: 4;
       text-line-spacing: 8;
     }
     [zoom=6] {
-      text-size: 18;
+      text-size: 18 * @text_multiplier;
       text-character-spacing: 5;
       text-line-spacing: 10;
     }
@@ -129,20 +130,20 @@
   [labelrank=4][zoom=4],
   [labelrank=5][zoom=5],
   [labelrank=6][zoom=6] {
-    text-size: 12;
+    text-size: 12 * @text_multiplier;
     text-character-spacing: 2;
     text-line-spacing: 6;
   }
   [labelrank=4][zoom=5],
   [labelrank=5][zoom=6],
   [labelrank=6][zoom=7] {
-    text-size: 14;
+    text-size: 14 * @text_multiplier;
     text-character-spacing: 3;
     text-line-spacing: 8;
   }
   [labelrank=4][zoom=6],
   [labelrank=5][zoom=7] {
-    text-size: 16;
+    text-size: 16 * @text_multiplier;
     text-character-spacing: 4;
     text-line-spacing: 1;
   }
@@ -167,7 +168,7 @@
   text-face-name: @sans_bold;
   text-placement: point;
   [zoom=2] { text-opacity:.75; }
-  text-size: 10;
+  text-size: 10 * @text_multiplier;
   text-fill: @country_text;
   text-halo-fill: @country_halo;
   text-halo-radius: 1;
@@ -175,44 +176,44 @@
   text-wrap-width: 30;
   text-min-distance: 2;
   [scalerank=1] {
-    [zoom=2]  { text-size: 12; text-wrap-width: 60; }
-    [zoom=3]  { text-size: 13; text-wrap-width: 60; }
-    [zoom=4]  { text-size: 14; text-wrap-width: 90; }
-    [zoom=5]  { text-size: 20; text-wrap-width: 120; }
-    [zoom>=6] { text-size: 20; text-wrap-width: 120; }
+    [zoom=2]  { text-size: 12 * @text_multiplier; text-wrap-width: 60; }
+    [zoom=3]  { text-size: 13 * @text_multiplier; text-wrap-width: 60; }
+    [zoom=4]  { text-size: 14 * @text_multiplier; text-wrap-width: 90; }
+    [zoom=5]  { text-size: 20 * @text_multiplier; text-wrap-width: 120; }
+    [zoom>=6] { text-size: 20 * @text_multiplier; text-wrap-width: 120; }
   }
   [scalerank=2] {
-    [zoom=3]  { text-size: 12; }
-    [zoom=4]  { text-size: 13; }
-    [zoom=5]  { text-size: 17; }
-    [zoom>=6] { text-size: 20; }
+    [zoom=3]  { text-size: 12 * @text_multiplier; }
+    [zoom=4]  { text-size: 13 * @text_multiplier; }
+    [zoom=5]  { text-size: 17 * @text_multiplier; }
+    [zoom>=6] { text-size: 20 * @text_multiplier; }
   }
   [scalerank=3] {
-    [zoom=4]  { text-size: 11; }
-    [zoom=5]  { text-size: 15; }
-    [zoom=6]  { text-size: 17; }
-    [zoom=7]  { text-size: 18; text-wrap-width: 60; }
-    [zoom>=8] { text-size: 20; text-wrap-width: 120; }
+    [zoom=4]  { text-size: 11 * @text_multiplier; }
+    [zoom=5]  { text-size: 15 * @text_multiplier; }
+    [zoom=6]  { text-size: 17 * @text_multiplier; }
+    [zoom=7]  { text-size: 18 * @text_multiplier; text-wrap-width: 60; }
+    [zoom>=8] { text-size: 20 * @text_multiplier; text-wrap-width: 120; }
   }
   [scalerank=4] {
-    [zoom=5] { text-size: 13; }
-    [zoom=6] { text-size: 15; text-wrap-width: 60  }
-    [zoom=7] { text-size: 16; text-wrap-width: 90; }
-    [zoom=8] { text-size: 18; text-wrap-width: 120; }
-    [zoom>=9] { text-size: 20; text-wrap-width: 120; }
+    [zoom=5] { text-size: 13 * @text_multiplier; }
+    [zoom=6] { text-size: 15 * @text_multiplier; text-wrap-width: 60  }
+    [zoom=7] { text-size: 16 * @text_multiplier; text-wrap-width: 90; }
+    [zoom=8] { text-size: 18 * @text_multiplier; text-wrap-width: 120; }
+    [zoom>=9] { text-size: 20 * @text_multiplier; text-wrap-width: 120; }
   }
   [scalerank=5] {
-    [zoom=5] { text-size: 12; }
-    [zoom=6] { text-size: 13; }
-    [zoom=7] { text-size: 14; text-wrap-width: 60; }
-    [zoom=8] { text-size: 16; text-wrap-width: 90; }
-    [zoom>=9] { text-size: 18; text-wrap-width: 120; }
+    [zoom=5] { text-size: 12 * @text_multiplier; }
+    [zoom=6] { text-size: 13 * @text_multiplier; }
+    [zoom=7] { text-size: 14 * @text_multiplier; text-wrap-width: 60; }
+    [zoom=8] { text-size: 16 * @text_multiplier; text-wrap-width: 90; }
+    [zoom>=9] { text-size: 18 * @text_multiplier; text-wrap-width: 120; }
   }
   [scalerank>=6] {
-    [zoom=6] { text-size: 11; }
-    [zoom=7] { text-size: 12; }
-    [zoom=8] { text-size: 14; }
-    [zoom>=9] { text-size: 16; }
+    [zoom=6] { text-size: 11 * @text_multiplier; }
+    [zoom=7] { text-size: 12 * @text_multiplier; }
+    [zoom=8] { text-size: 14 * @text_multiplier; }
+    [zoom>=9] { text-size: 16 * @text_multiplier; }
   }
 }
 
@@ -228,23 +229,23 @@
   text-halo-radius: 2;
   text-halo-rasterizer: fast;
   text-min-distance: 1;
-  text-size: 10;
+  text-size: 10 * @text_multiplier;
   [zoom>=5][zoom<=6] {
-    [area>10000] { text-size: 12; }
-    [area>50000] { text-size: 14; }
+    [area>10000] { text-size: 12 * @text_multiplier; }
+    [area>50000] { text-size: 14 * @text_multiplier; }
     text-wrap-width: 40;
   }
   [zoom>=7][zoom<=8] {
-    text-size: 14;
-    [area>50000] { text-size: 16; text-character-spacing: 1; }
-    [area>100000] { text-size: 18; text-character-spacing: 3; }
+    text-size: 14 * @text_multiplier;
+    [area>50000] { text-size: 16 * @text_multiplier; text-character-spacing: 1; }
+    [area>100000] { text-size: 18 * @text_multiplier; text-character-spacing: 3; }
     text-wrap-width: 60;
   }
   [zoom>=9][zoom<=10] {
     text-halo-radius: 2;
-    text-size: 16;
+    text-size: 16 * @text_multiplier;
     text-character-spacing: 2;
-    [area>50000] { text-size: 18; text-character-spacing: 2; }
+    [area>50000] { text-size: 18 * @text_multiplier; text-character-spacing: 2; }
     text-wrap-width: 100;
   }
 }
@@ -310,70 +311,70 @@
   // This is slightly inefficient-looking CartoCSS, but it saves
   // some space in the project.xml
   [zoom=8] {
-    text-size: 13;
+    text-size: 13 * @text_multiplier;
     text-wrap-width: 60;
-    [scalerank>=0][scalerank<=1] { text-size: 18; }
-    [scalerank>=2][scalerank<=3] { text-size: 16; }
-    [scalerank>=4][scalerank<=5] { text-size: 15; }
-    [scalerank>=6] { text-size: 13; }
+    [scalerank>=0][scalerank<=1] { text-size: 18 * @text_multiplier; }
+    [scalerank>=2][scalerank<=3] { text-size: 16 * @text_multiplier; }
+    [scalerank>=4][scalerank<=5] { text-size: 15 * @text_multiplier; }
+    [scalerank>=6] { text-size: 13 * @text_multiplier; }
   }
   [zoom=9] {
-    text-size: 14;
+    text-size: 14 * @text_multiplier;
     text-wrap-width: 60;
-    [scalerank>=0][scalerank<=1] { text-size: 19; }
-    [scalerank>=2][scalerank<=3] { text-size: 17; }
-    [scalerank>=4][scalerank<=5] { text-size: 16; }
-    [scalerank>=6] { text-size: 14; }
+    [scalerank>=0][scalerank<=1] { text-size: 19 * @text_multiplier; }
+    [scalerank>=2][scalerank<=3] { text-size: 17 * @text_multiplier; }
+    [scalerank>=4][scalerank<=5] { text-size: 16 * @text_multiplier; }
+    [scalerank>=6] { text-size: 14 * @text_multiplier; }
   }
   [zoom=10] {
-    text-size: 15;
+    text-size: 15 * @text_multiplier;
     text-wrap-width: 70;
-    [scalerank>=0][scalerank<=1] { text-size: 20; }
-    [scalerank>=2][scalerank<=3] { text-size: 19; }
-    [scalerank>=4][scalerank<=5] { text-size: 17; }
-    [scalerank>=6] { text-size: 15; }
+    [scalerank>=0][scalerank<=1] { text-size: 20 * @text_multiplier; }
+    [scalerank>=2][scalerank<=3] { text-size: 19 * @text_multiplier; }
+    [scalerank>=4][scalerank<=5] { text-size: 17 * @text_multiplier; }
+    [scalerank>=6] { text-size: 15 * @text_multiplier; }
   }
   [zoom=11] {
-    text-size: 16;
+    text-size: 16 * @text_multiplier;
     text-wrap-width: 80;
-    [scalerank>=0][scalerank<=1] { text-size: 20; }
-    [scalerank>=2][scalerank<=3] { text-size: 19; }
-    [scalerank>=4][scalerank<=5] { text-size: 17; }
-    [scalerank>=6] { text-size: 16; }
+    [scalerank>=0][scalerank<=1] { text-size: 20 * @text_multiplier; }
+    [scalerank>=2][scalerank<=3] { text-size: 19 * @text_multiplier; }
+    [scalerank>=4][scalerank<=5] { text-size: 17 * @text_multiplier; }
+    [scalerank>=6] { text-size: 16 * @text_multiplier; }
   }
   [zoom=12] {
-    text-size: 17;
+    text-size: 17 * @text_multiplier;
     text-wrap-width: 100;
-    [scalerank>=0][scalerank<=1] { text-size: 20; }
-    [scalerank>=2][scalerank<=3] { text-size: 19; }
-    [scalerank>=4][scalerank<=5] { text-size: 18; }
-    [scalerank>=6] { text-size: 17; }
+    [scalerank>=0][scalerank<=1] { text-size: 20 * @text_multiplier; }
+    [scalerank>=2][scalerank<=3] { text-size: 19 * @text_multiplier; }
+    [scalerank>=4][scalerank<=5] { text-size: 18 * @text_multiplier; }
+    [scalerank>=6] { text-size: 17 * @text_multiplier; }
   }
   [zoom=13] {
-    text-size: 18;
+    text-size: 18 * @text_multiplier;
     text-wrap-width: 200;
-    [scalerank>=0][scalerank<=1] { text-size: 20; }
-    [scalerank>=2][scalerank<=3] { text-size: 19; }
-    [scalerank>=4][scalerank<=5] { text-size: 19; }
-    [scalerank>=6] { text-size: 17; }
+    [scalerank>=0][scalerank<=1] { text-size: 20 * @text_multiplier; }
+    [scalerank>=2][scalerank<=3] { text-size: 19 * @text_multiplier; }
+    [scalerank>=4][scalerank<=5] { text-size: 19 * @text_multiplier; }
+    [scalerank>=6] { text-size: 17 * @text_multiplier; }
   }
   [zoom=14] {
     text-fill: lighten(@city_text,10);
-    text-size: 19;
+    text-size: 19 * @text_multiplier;
     text-wrap-width: 300;
-    [scalerank>=0][scalerank<=1] { text-size: 20; }
-    [scalerank>=2][scalerank<=3] { text-size: 20; }
-    [scalerank>=4][scalerank<=5] { text-size: 19; }
-    [scalerank>=6] { text-size: 18; }
+    [scalerank>=0][scalerank<=1] { text-size: 20 * @text_multiplier; }
+    [scalerank>=2][scalerank<=3] { text-size: 20 * @text_multiplier; }
+    [scalerank>=4][scalerank<=5] { text-size: 19 * @text_multiplier; }
+    [scalerank>=6] { text-size: 18 * @text_multiplier; }
   }
   [zoom=15] {
     text-fill: lighten(@city_text,10);
-    text-size: 20;
+    text-size: 20 * @text_multiplier;
     text-wrap-width: 400;
-    [scalerank>=0][scalerank<=1] { text-size: 20; }
-    [scalerank>=2][scalerank<=3] { text-size: 20; }
-    [scalerank>=4][scalerank<=5] { text-size: 20; }
-    [scalerank>=6] { text-size: 19; }
+    [scalerank>=0][scalerank<=1] { text-size: 20 * @text_multiplier; }
+    [scalerank>=2][scalerank<=3] { text-size: 20 * @text_multiplier; }
+    [scalerank>=4][scalerank<=5] { text-size: 20 * @text_multiplier; }
+    [scalerank>=6] { text-size: 19 * @text_multiplier; }
   }
 }
 
@@ -392,13 +393,13 @@
   text-line-spacing: -4;
   text-min-distance: 15;
   [zoom>=13] { text-min-distance: 4; }
-  text-size: 12;
-  [zoom>=11] { text-size: 14; text-min-distance: 18; }
-  [zoom>=12] { text-size: 15; text-wrap-width: 80; }
-  [zoom>=13] { text-size: 16; text-wrap-width: 120; }
-  [zoom>=14] { text-size: 18; text-wrap-width: 160; text-halo-radius: 3; }
-  [zoom>=15] { text-size: 20; text-wrap-width: 200; }
-  [zoom>=16] { text-size: 22; text-wrap-width: 240; }
+  text-size: 12 * @text_multiplier;
+  [zoom>=11] { text-size: 14 * @text_multiplier; text-min-distance: 18; }
+  [zoom>=12] { text-size: 15 * @text_multiplier; text-wrap-width: 80; }
+  [zoom>=13] { text-size: 16 * @text_multiplier; text-wrap-width: 120; }
+  [zoom>=14] { text-size: 18 * @text_multiplier; text-wrap-width: 160; text-halo-radius: 3; }
+  [zoom>=15] { text-size: 20 * @text_multiplier; text-wrap-width: 200; }
+  [zoom>=16] { text-size: 22 * @text_multiplier; text-wrap-width: 240; }
 }
 
 // Villages ____________________________________________________________
@@ -408,21 +409,22 @@
   text-face-name: @sans;
   text-placement: point;
   text-fill: @town_text;
-  text-size: 11;
+  text-size: 11 * @text_multiplier;
   text-halo-fill: @town_halo;
   text-halo-radius: 2;
   text-halo-rasterizer: fast;
   text-wrap-width: 60;
   text-wrap-before: true;
-  text-min-distance: 40;
+  text-min-distance: 1;//40;
   text-line-spacing: -4;
-  [zoom>=12] { text-size: 12; }
+  [zoom>=12] { text-size: 12 * @text_multiplier; }
   [zoom>=13] { text-wrap-width: 80; }
-  [zoom>=14] { text-size: 14; text-wrap-width: 100; }
-  [zoom>=15] { text-size: 16; text-wrap-width: 120; }
-  [zoom>=16] { text-size: 18; text-wrap-width: 160; }
-  [zoom=17] { text-size: 20; text-wrap-width: 200; }
-  text-min-padding: 1;
+  [zoom>=14] { text-size: 14 * @text_multiplier; text-wrap-width: 100; }
+  [zoom>=15] { text-size: 16 * @text_multiplier; text-wrap-width: 120; }
+  [zoom>=16] { text-size: 18 * @text_multiplier; text-wrap-width: 160; }
+  [zoom=17] { text-size: 20 * @text_multiplier; text-wrap-width: 200; }
+//  text-min-padding: 1;
+  text-allow-overlap: true;
 }
 
 // Suburbs _____________________________________________________________
@@ -432,7 +434,7 @@
   text-face-name: @sans_lt;
   text-placement: point;
   text-fill: @other_text;
-  text-size: 11;
+  text-size: 11 * @text_multiplier;
   text-halo-fill: @other_halo;
   text-halo-radius: 1.5;
   text-halo-rasterizer: fast;
@@ -441,11 +443,11 @@
   text-min-distance: 4;
   text-line-spacing: -2;
   [zoom=12] { text-min-distance: 30; }
-  [zoom>=13] { text-size: 12; text-min-distance: 20; }
-  [zoom>=14] { text-size: 13; text-wrap-width: 80; }
-  [zoom>=15] { text-size: 14; text-wrap-width: 120; }
-  [zoom>=16] { text-size: 16; text-wrap-width: 160; }
-  [zoom>=17] { text-size: 20; text-wrap-width: 200; }
+  [zoom>=13] { text-size: 12 * @text_multiplier; text-min-distance: 20; }
+  [zoom>=14] { text-size: 13 * @text_multiplier; text-wrap-width: 80; }
+  [zoom>=15] { text-size: 14 * @text_multiplier; text-wrap-width: 120; }
+  [zoom>=16] { text-size: 16 * @text_multiplier; text-wrap-width: 160; }
+  [zoom>=17] { text-size: 20 * @text_multiplier; text-wrap-width: 200; }
 }
 
 // Neighbourhoods & Hamlets ____________________________________________
@@ -457,7 +459,7 @@
     text-face-name: @sans_lt;
     text-placement: point;
     text-fill: @other_text;
-    text-size: 11;
+    text-size: 11 * @text_multiplier;
     text-halo-fill: @other_halo;
     text-halo-radius: 1.5;
     text-halo-rasterizer: fast;
@@ -465,11 +467,11 @@
     text-wrap-before: true;
     text-min-distance: 4;
     text-line-spacing: -2;
-    [zoom>=14] { text-size: 12; text-wrap-width: 80; }
-    [zoom>=16] { text-size: 14; text-wrap-width: 100; }
-    [zoom>=17] { text-size: 16; text-wrap-width: 130; }
-    [zoom>=18] { text-size: 18; text-wrap-width: 160; }
-    text-min-padding: 1;
+    [zoom>=14] { text-size: 12 * @text_multiplier; text-wrap-width: 80; }
+    [zoom>=16] { text-size: 14 * @text_multiplier; text-wrap-width: 100; }
+    [zoom>=17] { text-size: 16 * @text_multiplier; text-wrap-width: 130; }
+    [zoom>=18] { text-size: 18 * @text_multiplier; text-wrap-width: 160; }
+    //text-min-padding: 1;
   }
 }
 
@@ -486,7 +488,7 @@
     text-name: @name;
     text-halo-radius: 2;
     text-halo-rasterizer: fast;
-    text-size: 11;
+    text-size: 11 * @text_multiplier;
     text-wrap-width: 50;
     text-wrap-before: true;
     text-halo-fill: fadeout(#fff,80);
@@ -499,25 +501,25 @@
   [zoom>=16][area>200000],
   [zoom>=17][area>50000],
   [zoom>=18][area>10000] {
-    text-size: 12;
+    text-size: 12 * @text_multiplier;
     text-wrap-width: 75;
   }
   [zoom>=15][area>3200000],
   [zoom>=16][area>800000],
   [zoom>=17][area>200000],
   [zoom>=18][area>50000] {
-    text-size: 14;
+    text-size: 14 * @text_multiplier;
     text-wrap-width: 100;
   }
   [zoom>=16][area>3200000],
   [zoom>=17][area>800000],
   [zoom>=18][area>200000] {
-    text-size: 16;
+    text-size: 16 * @text_multiplier;
     text-wrap-width: 125;
   }
   [zoom>=17][area>3200000],
   [zoom>=18][area>800000] {
-    text-size: 18;
+    text-size: 18 * @text_multiplier;
     text-wrap-width: 150;
   }
 }
@@ -533,22 +535,28 @@
   text-halo-radius: 1.5;
   text-halo-rasterizer: fast;
   text-placement: line;
-  text-min-distance: 400;
-  text-size: 10;
+  // This is me tring to stop from so many repeated labels;
+//  text-max-char-angle-delta: 2.5;
+  text-min-padding: 30;
+  text-margin: 40;
+//  text-repeat-distance: 10000;
+  //text-min-distance: 400;
+  //text-spacing: 5000;
+  text-size: 10 * @text_multiplier;
   text-character-spacing: 0.25;
   text-dy: -7;
   [type='river'][zoom=14],
   [type='canal'][zoom=16],
   [type='stream'][zoom>=18] {
-    text-size: 10;
+    text-size: 10 * @text_multiplier;
   }
   [type='river'][zoom=15],
   [type='canal'][zoom>=17] {
-    text-size: 11;
+    text-size: 11 * @text_multiplier;
   }
   [type='river'][zoom>=16],
   [type='canal'][zoom>=18] {
-    text-size: 12;
+    text-size: 12 * @text_multiplier;
     text-spacing: 300;
   }
 }
@@ -644,7 +652,7 @@
   text-name: [house_num];
   text-face-name: @sans_italic;
   text-fill: @land * 0.8;
-  text-size: 9;
+  text-size: 9 * @text_multiplier;
 }
 
 /**/

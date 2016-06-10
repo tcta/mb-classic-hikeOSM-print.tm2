@@ -20,6 +20,10 @@
 @hospital: #fff0f0;
 @builtup: #f6faff;
 
+// This is for increasing the size of the text across the board by some multiple.
+// Useful when creating print maps and need to increase the text size
+@text_multiplier: 1.5;
+
 // Background //
 
 Map {
@@ -267,7 +271,7 @@ Map {
     text-name: "[ele]+' m'";
     text-face-name: 'Open Sans Regular';
     text-placement: line;
-    text-size: 10;
+    text-size: 10 * @text_multiplier;
     text-fill: #666;
     text-avoid-edges: true;
     text-halo-fill: fadeout(@crop,80%);
@@ -426,6 +430,7 @@ Map {
   [maritime=1] { line-color: darken(@water, 3%); }
   // Countries
   [admin_level=2] {
+    //line-opacity:0;
     [zoom=2] { line-width: 0.4; }
     [zoom=3] { line-width: 0.8; }
     [zoom=4] { line-width: 1; }
@@ -444,14 +449,19 @@ Map {
     [zoom>=12] { line-width: 3; }
     //line-opacity:0;
   }
+  [admin_level>=4] {
+    line-opacity:0;
+  }
 }
 
 /*#svaneti-racha-border {
-  line-color:#88a;
-  line-dasharray: 10,4;
-  line-opacity: 0.4;
-  [zoom<10] { line-width: 0; }
-  [zoom>=10] { line-width: 2; }
+  line-join: round;
+  line-color: #88a;
+  line-width: 0.4;
+  line-dasharray: 4,4;
+  [zoom>=6] { line-width: 0.5; }
+  [zoom>=8] { line-width: 1; }
+  [zoom>=12] { line-width: 2; }
 }*/
 
 /**/
