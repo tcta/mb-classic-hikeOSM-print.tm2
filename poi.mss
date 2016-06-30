@@ -61,10 +61,14 @@
 }
 
 // Get rid of some of the mountain climbing passes
-#mountain_pass[zoom>=11][name_en!=''][name_en=~".*[0-9][A-D]"] {
+#mountain_pass[zoom>=11][name_en!=''][name_en=~".*[0-9][A-D]"],
+#mountain_pass[zoom>=11][name_en!=''][name_en=~"Freshfield.*"],
+#mountain_pass[zoom>=11][name_en!=''][name_en=~"Kichkidar.*"],
+#mountain_pass[zoom>=11][name_en!=''][name_en=~"Donguz.*"]{
   text-opacity: 0;
   text-halo-opacity: 0;
   marker-opacity: 0;
+//  text-min-padding: 1;
 }
 
 #poi_label[maki='drinking-water'] {
@@ -82,8 +86,8 @@
   marker-fill: #5e95c4;
   marker-line-color: white;
   marker-line-width: 3;
-  [zoom>=16] {marker-width: 14;}
-  [zoom>=18] {marker-width: 16;}
+  [zoom>=15] {marker-width: 18;}
+  [zoom>=18] {marker-width: 22;}
   marker-file: url("img/maki/water-18.svg");
 }
   
@@ -130,6 +134,7 @@
     text-line-spacing: -4;
     text-wrap-width: 80;
     text-wrap-before: true;
+    text-size: 10 * @text_multiplier;
     [scalerank=1] {
       [zoom>=15] { text-size: 11 * @text_multiplier; text-wrap-width: 100; }
       [zoom>=16] { text-size: 12 * @text_multiplier; text-wrap-width: 120; }

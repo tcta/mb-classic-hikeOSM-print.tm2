@@ -8,8 +8,8 @@
 }*/
 
 #utm-lines[zoom>=14] {
-  line-color: @grid_color;
-  line-width: 0.5;
+  //line-color: @grid_color;
+  //line-width: 0.5;
 /*  [zoom>=15] {
     text-name: [Coordinate];
     text-face-name: @sans;
@@ -62,15 +62,15 @@
       text-halo-opacity:0;
     }
   }  
-}
+}*/
 
 #just-tct {
-  line-color: #fafa62;
-  line-width: 4;
-  line-opacity: 0.3;
+  //line-color: #f2a218;
+  //line-width: 2.5;
+  //line-opacity: 0.9;
 }
 
-#just-tct::and {
+/*#just-tct::and {
   line-color: black;//#d64646;
   line-width: 1.3;
   line-dasharray: 3,3;
