@@ -1,5 +1,6 @@
 _prefs: 
   baselayer: ''
+  mapid: tct.1f7f0331
   print: true
   saveCenter: false
 _properties: {}
@@ -18,9 +19,7 @@ format: "png8:m=h"
 interactivity_layer: ''
 layers: 
   - landcover
-  - dense_forest
-  - mechseri
-  - herbaceous
+  - landcover_tct
   - glaciers
   - landuse
   - contour.line
@@ -37,20 +36,18 @@ layers:
   - bridge
   - admin
   - svaneti-racha-border
-  - grid1330
-  - mapping-tasks
-  - osmtm_tasks_4
-  - utm-lines
+  - utm_lines
   - country_label_line
-  - tracksmaster
-  - just-tct
+  - tct_routes
+  - features
   - country_label
   - marine_label
   - state_label
   - place_label
   - water_label
-  - peaks
-  - mountain_pass
+  - peak-pass
+  - tct_points
+  - photos
   - mountain_peak_label
   - poi_label
   - road_label
@@ -60,11 +57,11 @@ layers:
 maxzoom: 20
 minzoom: 0
 name: hikeOSM
-source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.9c2d453a,tct.dabiwpod,tct.bayra4t9,tct.5cbwyx2h,tct.7xtuqxiy,tct.7pscrkhh,tct.0acy2lm6,tct.br86tmat,tct.81e5wlz3,tct.6itt4u7y,tct.5nlnyzd0,tct.59210768,tct.67807749"
+source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,tct.879ycvvr,tct.osm_peak_pass,tct.051f20bb,tct.tct_routes,tct.tct_points,tct.c77di1ba"
 styles: 
   - style.mss
   - road.mss
   - label.mss
   - poi.mss
-  - grid.mss
+  - more.mss
 template: ''

@@ -22,7 +22,7 @@
 
 // This is for increasing the size of the text across the board by some multiple.
 // Useful when creating print maps and need to increase the text size
-@text_multiplier: 3.0;
+@text_multiplier: 1.0; //1.5
 
 // Background //
 
@@ -78,13 +78,13 @@ Map {
 
 // Additional landcover I have added from Soviet maps (Tamo)
 
-#dense_forest[zoom<=21] {
+#landcover_tct[type="dense_forest"][zoom<=16] {
   polygon-fill: @wood;
 }
-#mechseri {
+#landcover_tct[type="mechseri"][zoom<=16] {
   polygon-fill: #e5edca;//lighten(@wood,5);
 }
-#herbaceous {
+#landcover_tct[type="herbaceous"][zoom<=16] {
   polygon-fill: #f3f6dc;//lighten(@grass,5);
 }
 

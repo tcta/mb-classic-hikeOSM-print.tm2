@@ -19,8 +19,8 @@
 }*/
 
 // Peaks
-#peaks[zoom>=11][name_en!=''],
-#peaks[zoom>=13][name_en=''] {
+#peak-pass[natural="peak"][zoom>=11][name_en!=''],
+#peak-pass[natural="peak"][zoom>=13][name_en=''] {
   text-name:'x\n' + [name_en] + '\n' + [ele];
   text-face-name: @sans;
   text-placement: point;
@@ -35,15 +35,17 @@
 }
 
 // Mountain Passes
-#mountain_pass[zoom>=11][name_en!=''] {
+#peak-pass[mountain_p="yes"][zoom>=11][name_en!=''] {
   text-face-name: @sans;
-  text-name: [name_en];
+  //text-name: [name_en];
+  text-name:[name_en] + '\n' + [ele];
   text-fill: #806b2d; 
   text-dy: 10;
   text-placement: point;
   text-halo-fill: @crop;//fadeout(#fff,80%);
   text-halo-radius: 1.2;
   text-halo-rasterizer: fast;
+  text-min-padding: 1; // Prevent text from getting cut off at tiles
   //marker-allow-overlap: true;
   marker-fill: black;
   [zoom<=13] {
@@ -61,14 +63,10 @@
 }
 
 // Get rid of some of the mountain climbing passes
-#mountain_pass[zoom>=11][name_en!=''][name_en=~".*[0-9][A-D]"],
-#mountain_pass[zoom>=11][name_en!=''][name_en=~"Freshfield.*"],
-#mountain_pass[zoom>=11][name_en!=''][name_en=~"Kichkidar.*"],
-#mountain_pass[zoom>=11][name_en!=''][name_en=~"Donguz.*"]{
+#peak-pass[mountain_p="yes"][zoom>=11][name_en!=''][name_en=~".*[0-9][A-D]"] {
   text-opacity: 0;
   text-halo-opacity: 0;
   marker-opacity: 0;
-//  text-min-padding: 1;
 }
 
 #poi_label[maki='drinking-water'] {
@@ -89,6 +87,7 @@
   [zoom>=15] {marker-width: 18;}
   [zoom>=18] {marker-width: 22;}
   marker-file: url("img/maki/water-18.svg");
+  //marker-allow-overlap: true;
 }
   
 
@@ -134,7 +133,6 @@
     text-line-spacing: -4;
     text-wrap-width: 80;
     text-wrap-before: true;
-    text-size: 10 * @text_multiplier;
     [scalerank=1] {
       [zoom>=15] { text-size: 11 * @text_multiplier; text-wrap-width: 100; }
       [zoom>=16] { text-size: 12 * @text_multiplier; text-wrap-width: 120; }
